@@ -1,0 +1,30 @@
+CXX       = clang++
+CXXFLAGS  = -std=gnu++2b
+CXXFLAGS += -fsanitize=address -fno-omit-frame-pointer
+CXXFLAGS += -g
+LDFLAGS   = -lfmt
+SRC       = $(shell ls *.cpp)
+DATASET   = input
+APP       = app.out
+
+default: clean fmt execute
+
+execute: build
+	@if [ -d "$(DATASET)" ]; then       \
+		for input in $(DATASET)/*.txt; do \
+			./$(APP) < $$input;             \
+		done;                             \
+	else                                \
+		./$(APP);                         \
+	fi
+
+build: $(SRC)
+	@$(CXX) $(CXXFLAGS) -o $(APP) $? $(LDFLAGS)
+
+clean:
+	@rm -f *.out
+
+fmt: 
+	@clang-format -i -style=file $(SRC)
+
+.PHONY: default execute build clean fmt 
