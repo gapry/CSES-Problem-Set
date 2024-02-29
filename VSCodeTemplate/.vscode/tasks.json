@@ -5,45 +5,27 @@
       "label": "Execute",
       "group": "build",
       "type": "shell",
-      "linux": {
-        "command": "make default"
-      },
+      "command": "make default",
       "options": {
         "cwd": "${workspaceFolder}"
-      },
-      "presentation": {
-        "reveal": "always",
-        "panel": "new"
       }
     },
     {
       "label": "Debug",
       "group": "build",
       "type": "shell",
-      "linux": {
-        "command": "make clean; make build"
-      },
+      "command": "make clean; make build",
       "options": {
         "cwd": "${workspaceFolder}"
-      },
-      "presentation": {
-        "reveal": "always",
-        "panel": "new"
       }
     },
     {
       "label": "Clean",
       "group": "build",
       "type": "shell",
-      "linux": {
-        "command": "make clean"
-      },
+      "command": "make clean",
       "options": {
         "cwd": "${workspaceFolder}"
-      },
-      "presentation": {
-        "reveal": "always",
-        "panel": "new"
       }
     }
   ]

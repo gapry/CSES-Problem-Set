@@ -5,12 +5,6 @@
   "terminal.integrated.commandsToSkipShell": [
     "-workbench.action.terminal.focusFind"
   ],
-  "terminal.integrated.profiles.windows": {
-    "Developer PowerShell for VS 2022": {
-      "path": "powershell.exe",
-    }
-  },
-  "terminal.integrated.defaultProfile.windows": "Developer PowerShell for VS 2022",
   "terminal.integrated.profiles.linux": {
     "fish": {
       "path": "/usr/bin/fish",
