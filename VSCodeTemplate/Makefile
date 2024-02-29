@@ -1,8 +1,6 @@
 CXX       = clang++
-CXXFLAGS  = -std=gnu++2b
-CXXFLAGS += -fsanitize=address -fno-omit-frame-pointer
+CXXFLAGS  = -std=c++20
 CXXFLAGS += -g
-LDFLAGS   = -lfmt
 SRC       = $(shell ls *.cpp)
 DATASET   = input
 APP       = app.out
@@ -19,7 +17,7 @@ execute: build
 	fi
 
 build: $(SRC)
-	@$(CXX) $(CXXFLAGS) -o $(APP) $? $(LDFLAGS)
+	@$(CXX) $(CXXFLAGS) -o $(APP) $?
 
 clean:
 	@rm -f *.out

@@ -17,7 +17,7 @@ execute: build
 	fi
 
 build: $(SRC)
-	@$(CXX) $(CXXFLAGS) -o $(APP) $? $(LDFLAGS)
+	@$(CXX) $(CXXFLAGS) -o $(APP) $?
 
 clean:
 	@rm -f *.out
