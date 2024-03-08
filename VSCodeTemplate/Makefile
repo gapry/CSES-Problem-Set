@@ -1,6 +1,6 @@
 CXX       = clang++
 CXXFLAGS  = -std=c++20
-CXXFLAGS += -g
+CXXFLAGS += -g -Wsign-compare
 SRC       = $(shell ls *.cpp)
 DATASET   = input
 APP       = app.out
